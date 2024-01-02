@@ -1,23 +1,16 @@
-import { useSelector, useDispatch } from 'react-redux'
-import { counterActions } from './redux/slices/counter'
+import { useDispatch } from 'react-redux'
+import { postsActions } from './redux/slices/posts'
 
 function App() {
-  const count = useSelector((store) => store.counter.count)
   const dispatch = useDispatch()
 
-  const handleIncreaseCount = () => {
-    dispatch(counterActions.increment())
-  }
-
-  const handleDecreaseCount = () => {
-    dispatch(counterActions.decrement())
+  const handleGetPosts = () => {
+    dispatch(postsActions.getPosts())
   }
 
   return (
     <div>
-      <button onClick={handleIncreaseCount}>+</button>
-      <button onClick={handleDecreaseCount}>-</button>
-      <div>{count}</div>
+      <button onClick={handleGetPosts}>Get Posts</button>
     </div>
   )
 }
