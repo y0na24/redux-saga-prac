@@ -4,13 +4,13 @@ import { postsActions } from './redux/slices/posts'
 function App() {
   const dispatch = useDispatch()
 
-  const handleGetPosts = () => {
-    dispatch(postsActions.getPosts())
+  const handleGetPostsAndUsers = () => {
+    dispatch(postsActions.getUsersAndPosts())
   }
 
   return (
     <div>
-      <button onClick={handleGetPosts}>Get Posts</button>
+      <button onClick={handleGetPostsAndUsers}>Get Posts and Users</button>
     </div>
   )
 }

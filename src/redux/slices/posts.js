@@ -11,7 +11,7 @@ const postsSlice = createSlice({
     setPosts: (state, action) => {
       state.posts = action.payload
     },
-    getPosts: (state) => {}
+    getUsersAndPosts: (state) => {}
   }
 })
 

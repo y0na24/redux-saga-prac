@@ -4,10 +4,12 @@ import { postsReducer } from './slices/posts'
 import { combineReducers } from 'redux'
 import rootSaga from './sagas'
 import createSagaMiddleware from 'redux-saga'
+import { userReducer } from './slices/user'
 
 export const rootReducer = combineReducers({
   counter: counterReducer,
-  posts: postsReducer
+  posts: postsReducer,
+  user: userReducer
 })
 
 const sagaMiddleware = createSagaMiddleware()
